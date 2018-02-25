@@ -7,7 +7,6 @@ from django.utils import six
 from django.utils.functional import LazyObject
 from django.utils.module_loading import import_string
 
-
 DJOSER_SETTINGS_NAMESPACE = 'DJOSER'
 
 
@@ -59,6 +58,8 @@ default_settings = {
             'djoser.serializers.TokenSerializer',
         'token_create':
             'djoser.serializers.TokenCreateSerializer',
+        'oauth2_token_create':
+            'djoser.social.serializers.ProviderAuthSerializer'
     }),
     'EMAIL': ObjDict({
         'activation': 'djoser.email.ActivationEmail',
